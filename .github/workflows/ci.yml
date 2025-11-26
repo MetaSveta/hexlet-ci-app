@@ -1,0 +1,21 @@
+name: ci
+
+on:
+  push:
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies (make setup)
+        run: make setup
+
+      - name: Run linter (make lint)
+        run: make lint
+
+      - name: Run tests (make test)
+        run: make test
