@@ -2,6 +2,7 @@ name: ci
 
 on:
   push:
+  pull_request:
 
 jobs:
   ci:
@@ -24,3 +25,6 @@ jobs:
 
       - name: Run tests (make test)
         run: make test
+
+      - name: Say: "Hello from Hexlet!"
+        uses: hexlet-components/hello-from-hexlet-action@release
