@@ -26,5 +26,5 @@ jobs:
       - name: Run tests (make test)
         run: make test
 
-      - name: Say: "Hello from Hexlet!"
+      - name: Say Hello from Hexlet!
         uses: hexlet-components/hello-from-hexlet-action@release
