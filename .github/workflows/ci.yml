@@ -11,7 +11,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install dependencies (make setup)
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20      
+
+      - name: Install dependencies and build (make setup)
         run: make setup
 
       - name: Run linter (make lint)
